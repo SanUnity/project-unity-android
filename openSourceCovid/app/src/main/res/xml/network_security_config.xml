@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<network-security-config>
-	<domain-config cleartextTrafficPermitted="false">
-		<domain includeSubdomains="true">*** YOUR SUBDOMAIN HERE ***</domain>
-		<pin-set expiration="2022-01-01">
-			<pin digest="SHA-256">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=</pin>
-		</pin-set>
-	</domain-config>
-</network-security-config>
