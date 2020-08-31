@@ -1,0 +1,5 @@
+//Uncomment flavour sdk
+//include ':sdk_exposure'
+include 'sdk'
+rootProject.name='COVID_CORE'
+include ':app'

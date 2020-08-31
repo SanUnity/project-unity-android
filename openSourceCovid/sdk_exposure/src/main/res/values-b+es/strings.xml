@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+
+<resources>
+
+	<string name="dp3t_sdk_service_notification_channel">COVID-CORE</string>
+	<string name="dp3t_sdk_service_notification_title">COVID-CORE</string>
+	<string name="dp3t_sdk_service_notification_text">Buscando a gente alrededor…</string>
+	<string name="dp3t_sdk_service_notification_errors">La applicación no puede funcionar correctamente:</string>
+	<string name="dp3t_sdk_service_notification_error_location_service">Servicios de localizacion desactivados</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_disabled">Bluetooth desactivado</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_not_supported">Bluetooth de baja latencia no compatible con el dispositivo</string>
+	<string name="dp3t_sdk_service_notification_error_sync_server">No se han podido cargar los datos (server error)</string>
+	<string name="dp3t_sdk_service_notification_error_sync_network">No se han podido cargar los datos (network error)</string>
+	<string name="dp3t_sdk_service_notification_error_sync_database">No se han podido cargar los datos (database error)</string>
+	<string name="dp3t_sdk_service_notification_error_sync_timing">La hora del dispositivo no concuerda con la del servidor</string>
+	<string name="dp3t_sdk_service_notification_error_sync_signature">No se han podido cargar los datos (invalid signature)</string>
+	<string name="dp3t_sdk_service_notification_error_sync_api">No se han podido cargar los datos </string>
+	<string name="dp3t_sdk_service_notification_error_gaen_not_available">Notificaciones de proximidad no disponibles en el dispositivo</string>
+	<string name="dp3t_sdk_service_notification_error_gaen_unexpectedly_disabled">Notificaciones de proximidad desactivadas, se espera que estén activadas</string>
+	<string name="dp3t_sdk_service_notification_error_battery_optimization">Optimización de la batería activada</string>
+
+</resources>

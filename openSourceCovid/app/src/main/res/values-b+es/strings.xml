@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="backPressed">true</bool>
+    <string name="names"></string>
+
+    <!--    Notificaciones Bluetrace-->
+    <string name="notification_title_error">"Error "</string>
+    <string name="notification_text_paused">Parado servicio Bluetooth</string>
+    <string name="notification_action_resume">Reanudando servicio</string>
+    <string name="notification_text_bluetooth_disabled">Bluetooth desactivado</string>
+    <string name="notification_action_enable_bluetooth">Activando Bluetooth</string>
+    <string name="notification_action_pause">Parandio el bluetooth</string>
+    <string name="notification_title">Default title value</string>
+    <string name="notification_text_resumed">Default text string</string>
+    <string name="foreground_service_alert_channel">Mensaje alerta</string>
+    <string name="foreground_service_channel">Mensaje servicio</string>
+    <string name="permission_write_rationale">We need permission to write files</string>
+    <string name="service_not_ok_title">El servicio no pudo ser inicializado</string>
+    <string name="service_not_ok_body">El servicio no se ha inicializado por falta de permisos</string>
+    <string name="service_ok_title">Servicio activado</string>
+    <string name="service_ok_body">La aplicación tiene el servicio activo!</string>
+    <string name="splashscreen">SplashScreen</string>
+    <!--    Notificaciones Bluetrace-->
+
+    <!--    Placeholders-->
+    <string name="filterMainActivity">filterMainApp</string>
+    <string name="titleExposed">title-Exposed</string>
+    <string name="bodyExposed">body-exposed</string>
+    <!--    Placeholders-->
+
+    <string name="se_necesista_conexi_n_a_internet">Sin conexión a intenet</string>
+    <string name="comprueba_tu_conexi_n_wi_fi_o_de_datos_m_viles">Comprueba tu conexión Wi-Fi o de datos móviles</string>
+    <string name="noMainActStartBt">Reinicia la app para iniciar el contact tracing</string>
+    <string name="notifBody">Ayuda a detener la propagación de COVID-19 manteniendo activadas las Notificaciones de Exposición de tu teléfono hasta que termine el brote.</string>
+    <string name="notifTitle">¡Te necesitamos!</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="para_continuar_debes_leer_el_codigo_qr_del_centro">Para continuar debes leer el codigo QR del centro</string>
+    <string name="lee_el_qr_del_centro">Lee el QR del centro</string>
+    <string name="prueba_f_sica_de_diagn_stico">Prueba física de diagnóstico</string>
+    <string name="cameraPermissionFailed">Debes dar permisos de cámara para leer el QR</string>
+    <string name="url_share">ShareDefaultURL</string>
+    <string name="text_share">COVID-19. Ayude a detener la propagación de COVID-19.</string>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020 Ubique Innovation AG <https://www.ubique.ch>
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  -->
+
+<resources>
+
+	<string name="dp3t_sdk_service_notification_channel">COVID-CORE</string>
+	<string name="dp3t_sdk_service_notification_title">COVID-CORE</string>
+	<string name="dp3t_sdk_service_notification_text">Procurando por pessoas próximas…</string>
+	<string name="dp3t_sdk_service_notification_errors">O aplicativo não pode funcionar corretamente:</string>
+	<string name="dp3t_sdk_service_notification_error_location_service">serviço de localização desativado</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_disabled">bluetooth está desativado</string>
+	<string name="dp3t_sdk_service_notification_error_bluetooth_not_supported">bluetooth de baixa energia não é suportado por este dispositivo</string>
+	<string name="dp3t_sdk_service_notification_error_sync_server">não carregou novos dados de infecção (erro no servidor)</string>
+	<string name="dp3t_sdk_service_notification_error_sync_network">não conseguiu carregar novos dados de infecção (erro de rede)</string>
+	<string name="dp3t_sdk_service_notification_error_sync_database">não carregou novos dados de infecção (erro no banco de dados)</string>
+	<string name="dp3t_sdk_service_notification_error_sync_timing">O tempo do dispositivo não corresponde ao tempo do servidor</string>
+	<string name="dp3t_sdk_service_notification_error_sync_signature">não carregou novos dados de infecção (assinatura inválida)</string>
+	<string name="dp3t_sdk_service_notification_error_sync_api">não conseguiu carregar novos dados de infecção</string>
+	<string name="dp3t_sdk_service_notification_error_gaen_not_available">as notificações de exposição do google não estão disponíveis neste dispositivo</string>
+	<string name="dp3t_sdk_service_notification_error_gaen_unexpectedly_disabled">notificações de exposição do google desativadas, mas esperava-se que estivessem ativas</string>
+	<string name="dp3t_sdk_service_notification_error_battery_optimization">otimização da bateria habilitada</string>
+
+</resources>

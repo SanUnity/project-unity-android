@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="backPressed">true</bool>
+    <string name="names"></string>
+
+    <!--    Notificaciones Bluetrace-->
+    <string name="notification_title_error">"Error "</string>
+    <string name="notification_text_paused">Parado servicio Bluetooth</string>
+    <string name="notification_action_resume">Reanudando servicio</string>
+    <string name="notification_text_bluetooth_disabled">Bluetooth desactivado</string>
+    <string name="notification_action_enable_bluetooth">Activando Bluetooth</string>
+    <string name="notification_action_pause">Parandio el bluetooth</string>
+    <string name="notification_title">Default title value</string>
+    <string name="notification_text_resumed">Default text string</string>
+    <string name="foreground_service_alert_channel">Mensaje alerta</string>
+    <string name="foreground_service_channel">Mensaje servicio</string>
+    <string name="permission_write_rationale">We need permission to write files</string>
+    <string name="service_not_ok_title">El servicio no pudo ser inicializado</string>
+    <string name="service_not_ok_body">El servicio no se ha inicializado por falta de permisos</string>
+    <string name="service_ok_title">Servicio activado</string>
+    <string name="service_ok_body">La aplicación tiene el servicio activo!</string>
+    <string name="splashscreen">SplashScreen</string>
+    <!--    Notificaciones Bluetrace-->
+
+    <!--    Placeholders-->
+    <string name="filterMainActivity">filterMainApp</string>
+    <string name="titleExposed">title-Exposed</string>
+    <string name="bodyExposed">body-exposed</string>
+    <!--    Placeholders-->
+
+    <string name="se_necesista_conexi_n_a_internet">Sem conexão à internet</string>
+    <string name="comprueba_tu_conexi_n_wi_fi_o_de_datos_m_viles">Verifique sua conexão de dados Wi-Fi ou dados móveis</string>
+    <string name="noMainActStartBt">É necessário reiniciar o aplicativo para reiniciar o Bluetooth!</string>
+    <string name="notifBody">Ajude a impedir a disseminação do COVID-19, mantendo o Bluetooth do seu telefone ligado até que o surto termine.</string>
+    <string name="notifTitle">Nós precisamos de você!</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="para_continuar_debes_leer_el_codigo_qr_del_centro">Para continuar deve ler o código QR do centro</string>
+    <string name="lee_el_qr_del_centro">Leia o QR do centro</string>
+    <string name="prueba_f_sica_de_diagn_stico">Teste Físico de Diagnóstico</string>
+    <string name="cameraPermissionFailed">Deve dar permissão à câmara para ler o QR</string>
+    <string name="url_share">ShareDefaultURL</string>
+    <string name="text_share">COVID-19. Ajude a parar a propagação do COVID-19.</string>
+
+</resources>

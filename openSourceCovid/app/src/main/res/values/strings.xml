@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="backPressed">true</bool>
+    <string name="names"></string>
+
+    <!--    Notificaciones Bluetrace-->
+    <string name="notification_title_error">"Error "</string>
+    <string name="notification_text_paused">Stopped Bluetooth service</string>
+    <string name="notification_action_resume">Resuming service</string>
+    <string name="notification_text_bluetooth_disabled">Bluetooth deactivated</string>
+    <string name="notification_action_enable_bluetooth">Activating Bluetooth</string>
+    <string name="notification_action_pause">Stopping Bluetooth</string>
+    <string name="notification_title">Default title value</string>
+    <string name="notification_text_resumed">Default text string</string>
+    <string name="foreground_service_alert_channel">Warning message</string>
+    <string name="foreground_service_channel">Service Message</string>
+    <string name="permission_write_rationale">We need permission to write files</string>
+    <string name="service_not_ok_title">Service could\'nt be initialized</string>
+    <string name="service_not_ok_body">Service could not be initialize due to a lack of permissions</string>
+    <string name="service_ok_title">Service activated correctly</string>
+    <string name="service_ok_body">Service is currently running!</string>
+    <string name="splashscreen">SplashScreen</string>
+    <!--    Notificaciones Bluetrace-->
+
+    <!--    Placeholders-->
+    <string name="filterMainActivity">filterMainApp</string>
+    <string name="titleExposed">title-Exposed</string>
+    <string name="bodyExposed">body-exposed</string>
+    <!--    Placeholders-->
+
+    <string name="se_necesista_conexi_n_a_internet">No Internet connection</string>
+    <string name="comprueba_tu_conexi_n_wi_fi_o_de_datos_m_viles">Check your Wi-Fi or mobile data connection</string>
+    <string name="notifBody">Help stop the spread of COVID-19 by keeping your phone’s Bluetooth on until the outbreak is over.</string>
+    <string name="notifTitle">We need you!</string>
+    <string name="cancelar">Cancel</string>
+    <string name="noMainActStartBt">Restart the application to enable tracing</string>
+    <string name="para_continuar_debes_leer_el_codigo_qr_del_centro">To continue you must read the QR</string>
+    <string name="lee_el_qr_del_centro">Read the required QR</string>
+    <string name="prueba_f_sica_de_diagn_stico">Diagnostic Physical Test</string>
+    <string name="cameraPermissionFailed">Permission is required to read the QR</string>
+    <string name="url_share">ShareDefaultURL</string>
+    <string name="text_share">COVID-19.Help stopping COVID-19.</string>
+
+</resources>

@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "918862083109",
+    "firebase_url": "https://covid-19mx.firebaseio.com",
+    "project_id": "covid-19mx",
+    "storage_bucket": "covid-19mx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918862083109:android:a0d3a0e81968b9da8c7bcc",
+        "android_client_info": {
+          "package_name": "mx.gob.www"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918862083109-ds0u5rfam74mani99f4nv8o9fcpk5n1a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.gob.www",
+            "certificate_hash": "af1d23ea5c2053903796a32cb8b92dcbe1edd327"
+          }
+        },
+        {
+          "client_id": "918862083109-lclamquq22clotvb7j20oi8stvk2aikp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.gob.www",
+            "certificate_hash": "e84f2a360aafb995adf2ecde9598e2318b4b95b2"
+          }
+        },
+        {
+          "client_id": "918862083109-ogchfs1b64f3vfn4f70s2dmok10k288q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn88lZvkBwb5Q-LAiCs8Mni56lclVb67s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918862083109-ogchfs1b64f3vfn4f70s2dmok10k288q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "918862083109-nia0jnu34ua791totd3bdjrv1hb1645m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "mx.gob.www",
+                "app_store_id": "1505632889"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
