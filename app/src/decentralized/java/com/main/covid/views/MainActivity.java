@@ -32,6 +32,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
@@ -50,6 +51,7 @@ import com.main.covid.utils.PermissionCompanion;
 import com.main.covid.web.WebAppInterface;
 
 import org.dpppt.android.sdk.DP3T;
+import org.dpppt.android.sdk.TracingStatus;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
@@ -59,6 +61,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.nio.charset.StandardCharsets;
+import java.util.Collection;
 import java.util.HashMap;
 
 import io.reactivex.disposables.Disposable;
@@ -452,12 +455,16 @@ public class MainActivity extends AppCompatActivity implements NetworkStateRecei
 
 
     public void requestEnableBt() {
-        if (BluetoothAdapter.getDefaultAdapter() != null &&
-                BluetoothAdapter.getDefaultAdapter().isEnabled() &&
-                BluetoothAdapter.getDefaultAdapter().getState() == BluetoothAdapter.STATE_ON) {
+        if (isBluetoothAvailable()) {
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, REQUEST_BT_ENABLE);
         }
+    }
+
+    private boolean isBluetoothAvailable() {
+        return BluetoothAdapter.getDefaultAdapter() != null &&
+                BluetoothAdapter.getDefaultAdapter().isEnabled() &&
+                BluetoothAdapter.getDefaultAdapter().getState() == BluetoothAdapter.STATE_ON;
     }
 
     public void startBTService() {
@@ -595,6 +602,35 @@ public class MainActivity extends AppCompatActivity implements NetworkStateRecei
 
     }
 
+    public void getStatus() {
+
+//        0 -> Servicio parado inactivo
+//        1 -> Servicio activo all ok
+//        2 -> Bluetooth desactivado
+//        4 -> Notificaciones pushs no activadas
+//        6 -> No location permission
+//        7 -> No location Service
+        int statusValue = NotificationManagerCompat.from(this).areNotificationsEnabled() ? 0 : 4;
+        if (statusValue == 0 && DP3T.isStarted(this)) {
+            TracingStatus status = DP3T.getStatus(this);
+            Collection<TracingStatus.ErrorState> errors = status.getErrors();
+            if (!errors.isEmpty()) {
+                if (errors.contains(TracingStatus.ErrorState.BLE_DISABLED) && !isBluetoothAvailable()) {
+                    sendStatusToWebView(2);
+                } else if (errors.contains(TracingStatus.ErrorState.MISSING_LOCATION_PERMISSION))
+                    sendStatusToWebView(6);
+                else if (errors.contains(TracingStatus.ErrorState.LOCATION_SERVICE_DISABLED))
+                    sendStatusToWebView(7);
+                else
+                    sendStatusToWebView(-1);
+            } else
+                sendStatusToWebView(1);
+        } else {
+            sendStatusToWebView(statusValue);
+        }
+
+    }
+
     private void sendContacts(String contacts) {
         if (contacts != null) {
             byte[] data = contacts.getBytes(StandardCharsets.UTF_8);
@@ -617,4 +653,9 @@ public class MainActivity extends AppCompatActivity implements NetworkStateRecei
     public void sendEmptyToken() {
         runOnUiThread(() -> webView.loadUrl("javascript:setToken('')"));
     }
+
+    private void sendStatusToWebView(int finalStatus) {
+        runOnUiThread(() -> webView.loadUrl("javascript:setBTStatus('" + finalStatus + "')"));
+    }
+
 }

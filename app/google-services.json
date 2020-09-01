@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "432983843282",
+    "firebase_url": "https://covid-19-ccaa.firebaseio.com",
+    "project_id": "covid-19-ccaa",
+    "storage_bucket": "covid-19-ccaa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432983843282:android:34b499ae56d2d72191e80b",
+        "android_client_info": {
+          "package_name": "es.grupogo.covid19.ccaa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432983843282-pfdg3d0n6b88s7itjppnc59e6nmf71p4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "es.grupogo.covid19.ccaa",
+            "certificate_hash": "af1d23ea5c2053903796a32cb8b92dcbe1edd327"
+          }
+        },
+        {
+          "client_id": "432983843282-6qltckgtb4ioq5283vto3llmdfgnoj0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa3rZZimKzcWmg7Hb1B40tta-U5_JAgCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432983843282-6qltckgtb4ioq5283vto3llmdfgnoj0j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "432983843282-k8siq6klpj22sdet3k9upqq6sedmp38m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "es.covid19.sample"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

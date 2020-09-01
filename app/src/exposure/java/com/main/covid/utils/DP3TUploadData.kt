@@ -4,9 +4,8 @@ import android.app.Activity
 import android.content.Context
 import android.util.Log
 import android.widget.Toast
-import com.google.common.reflect.TypeToken
-import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.google.gson.JsonSyntaxException
 import com.main.covid.App
 import com.main.covid.R
 import com.main.covid.db.SharedPrefsRepository
@@ -21,9 +20,7 @@ import org.koin.java.KoinJavaComponent
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.lang.Exception
 import java.util.*
-import kotlin.collections.ArrayList
 
 /**
  * Created by Rubén Izquierdo, Global Incubator
@@ -104,31 +101,37 @@ object DP3TUploadData {
 
                     val gson = GsonBuilder().create()
                     val myType = object : com.google.gson.reflect.TypeToken<ExposedConfig>() {}.type
-                    val serverObject: ExposedConfig = gson.fromJson(response.body(), myType)
+                    try {
+                        val serverObject: ExposedConfig = gson.fromJson(response.body(), myType)
 
-                    DP3T.setMatchingParameters(
-                        context,
-                        serverObject.minimumRiskScore,
-                        serverObject.attenuationLevelValues,
-                        serverObject.daysSinceLastExposureLevelValues,
-                        serverObject.durationLevelValues,
-                        serverObject.transmissionRiskLevelValues,
-                        serverObject.lowerThreshold,
-                        serverObject.higherThreshold,
-                        serverObject.factorLow,
-                        serverObject.factorHigh,
-                        serverObject.triggerThreshold
-                    )
+                        DP3T.setMatchingParameters(
+                            context,
+                            serverObject.minimumRiskScore,
+                            serverObject.attenuationLevelValues,
+                            serverObject.daysSinceLastExposureLevelValues,
+                            serverObject.durationLevelValues,
+                            serverObject.transmissionRiskLevelValues,
+                            serverObject.lowerThreshold,
+                            serverObject.higherThreshold,
+                            serverObject.factorLow,
+                            serverObject.factorHigh,
+                            serverObject.triggerThreshold
+                        )
 
-                    sharedPrefsRepository.setExposedNotificationTitle(serverObject.alert.title)
-                    sharedPrefsRepository.setExposedNotificationBody(serverObject.alert.body)
+                        sharedPrefsRepository.setExposedNotificationTitle(serverObject.alert.title)
+                        sharedPrefsRepository.setExposedNotificationBody(serverObject.alert.body)
 
-                    Log.w(
-                        "EXPOSURE_CONFIG",
-                        "Configuration loaded correctly"
-                    )
-
-
+                        Log.w(
+                            "EXPOSURE_CONFIG",
+                            "Configuration loaded correctly"
+                        )
+                    }
+                    catch (ex: JsonSyntaxException){
+                        Log.w(
+                            "EXPOSURE_CONFIG",
+                            "Error getting exposure notifications config"
+                        )
+                    }
                 } else {
                     Log.w(
                         "EXPOSURE_CONFIG",

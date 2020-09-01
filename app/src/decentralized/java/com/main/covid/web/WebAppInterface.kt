@@ -191,6 +191,16 @@ class WebAppInterface(
         } catch (ex: Exception) {
             Log.i("E", "Couldn't get main activity")
         }
+    }
 
+
+    @JavascriptInterface
+    fun getStatus() {
+        try {
+            mContext as MainActivity
+            mContext.getStatus()
+        } catch (ex: Exception) {
+            Log.i("E", "Couldn't get main activity")
+        }
     }
 }

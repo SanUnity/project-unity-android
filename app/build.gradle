@@ -78,7 +78,7 @@ android {
             dimension "default"
             versionName "2.1.0"
             versionCode 126
-            applicationId "mx.gob.www"
+            applicationId "es.grupogo.covid19.ccaa"
             buildConfigField "String", "BT_TYPE", "\"CENTRALIZED\""
         }
 
@@ -86,7 +86,7 @@ android {
             dimension "default"
             versionName "2.1.0"
             versionCode 126
-            applicationId "mx.gob.www"
+            applicationId "es.grupogo.covid19.ccaa"
             buildConfigField "String", "BT_TYPE", "\"DECENTRALIZED\""
         }
 
@@ -94,7 +94,7 @@ android {
             dimension "default"
             versionName "2.1.0"
             versionCode 126
-            applicationId "mx.gob.www"
+            applicationId "es.grupogo.covid19.ccaa"
             buildConfigField "String", "BT_TYPE", "\"DECENTRALIZED\""
         }
     }
@@ -124,9 +124,9 @@ dependencies {
     implementation fileTree(dir: '../../dp3t-sdk/sdk/libs', include: ['*.aar'])
 
 //    Uncomment to integrate DP3T without exposure notifications
-    implementation project(':sdk')
+//    implementation project(':sdk')
 //    Uncomment to integrate DP3T with exposure notifications
-//    implementation project(':sdk_exposure')
+    implementation project(':sdk_exposure')
 
 
     def versions_room = "2.2.5"
