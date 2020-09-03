@@ -8,7 +8,7 @@ El Project Unity es un projecto abierto con el que se pretende ayudar en la luch
 
 ### Configuración de los diferentes Flavours para su ejecución
 
-El proyecto tiene añadido dos SDKs de DP3T, uno llamado **sdk** y el otro **sdk_exposure**. 
+El proyecto tiene añadidos dos SDKs de DP3T, uno llamado **sdk** y el otro **sdk_exposure**. 
 Al cambiar a cualquiera de los diferentes flavours hay que tener en cuenta lo siguiente en el gradle para que la compilación sea correcta.
 
 * Centralized: En el **build.gradle** de la app ha de descomentarse la línea 154, la cuál añade la biblioteca del Bluetooth de baja frecuencia.
@@ -23,28 +23,15 @@ Kotlin 1.3.61
 
 Las siguientes bibliotecas son las más destacables dentro del proyecto.
 
-**************************************************** WIP ****************************************************************************
 Comunes:
 * [RxPermisssions](com.github.tbruyelle:rxpermissions:0.10.2)
 * [Koin](org.koin:koin-android)
-
+* [retrofit2](com.squareup.retrofit2:retrofit)
+* [firebase](com.google.firebase:firebase-analytics)
 
 Dentro del flavour centralizado:
 * [RxBLE](com.polidea.rxandroidble2:rxandroidble:1.10.1)
 * [Room](androidx.room:room-runtime)
-
-Dentro del flavour descentralizado:
-* [DP-3T](https://github.com/DP-3T/dp3t-sdk-ios)
-* [SwiftKeychainWrapper](https://github.com/jrendel/SwiftKeychainWrapper)
-* [TrustKit](https://github.com/datatheorem/TrustKit)
-* [ReachabilitySwift](https://github.com/ashleymills/Reachability.swift)
-* [SQLite](https://github.com/stephencelis/SQLite.swift)
-* [SwiftProtobuf](https://github.com/apple/swift-protobuf)
-* [SwiftJWT](https://github.com/IBM-Swift/Swift-JWT)
-
-Dentro del flavour de las exposure notification:
-
-**************************************************** WIP ****************************************************************************
 
 ### Permisos requeridos
 
@@ -83,7 +70,7 @@ Además podremos encontrar variables de configuración para el sistema de tracke
 
 ### Conexión webapp/nativa:
 
-El envío de información desde el JS a la parte nativa se realiza mediante una interfaz de JavaScript que se encuentra en el fichero **WebAppInterface.kt**, la cual es asignada a la WebView en la MainActivity cuando se es creada.
+El envío de información desde el JS a la parte nativa se realiza mediante una interfaz de JavaScript que se encuentra en el fichero **WebAppInterface.kt**, la cual es asignada a la WebView en la MainActivity cuando es creada.
 
 El envío de información desde la parte nativa a la webapp se realiza mediante llamadas al JS del WebView
 
@@ -102,6 +89,19 @@ Caben a destacar las siguientes funcionalidades de la interfaz:
 * openAppSettings 
 * getDeviceToken
 * share
+
+### Descentralizado: BlueTrace Protocol (Modelo Singaput)
+BlueTrace es un protocolo que preserva la privacidad para el rastreo de contactos impulsado por la comunidad mediante dispositivos Bluetooth, que permite la interoperabilidad global.
+
+BlueTrace está diseñado para el registro de proximidad descentralizado y complementa el rastreo de contactos centralizado por parte de las autoridades de salud pública. El registro de proximidad mediante Bluetooth aborda una limitación clave del rastreo manual de contactos: que depende de la memoria de una persona y, por lo tanto, se limita a los contactos que una persona conoce y recuerda haber conocido. Por lo tanto, BlueTrace permite que el rastreo de contactos sea más escalable y requiera menos recursos.
+
+### Centralizado: DP^3T (Modelo Suiza
+El proyecto Decentralized Privacy-Preserving Proximity Tracing (DP-3T) es un protocolo abierto para el rastreo de proximidad COVID-19 que utiliza la funcionalidad Bluetooth Low Energy en dispositivos móviles que garantiza que los datos personales permanezcan completamente en el teléfono de una persona. Fue elaborado por un equipo central de más de 25 científicos e investigadores académicos de toda Europa. También ha sido examinado y mejorado por la comunidad en general.
+
+DP-3T es un esfuerzo independiente iniciado en EPFL y ETHZ que produjo este protocolo y que lo está implementando en una aplicación y un servidor de código abierto.)
+
+### Exposure Notification API: Apple/Google Framework
+La API de notificaciones de exposición es un esfuerzo conjunto entre Apple y Google para proporcionar la funcionalidad principal para crear aplicaciones iOS y Android para notificar a los usuarios de una posible exposición a casos confirmados de COVID-19.
 
 ### Exposure Notification API:
 
