@@ -124,9 +124,9 @@ dependencies {
     implementation fileTree(dir: '../../dp3t-sdk/sdk/libs', include: ['*.aar'])
 
 //    Uncomment to integrate DP3T without exposure notifications
-//    implementation project(':sdk')
+    implementation project(':sdk')
 //    Uncomment to integrate DP3T with exposure notifications
-    implementation project(':sdk_exposure')
+//    implementation project(':sdk_exposure')
 
 
     def versions_room = "2.2.5"
